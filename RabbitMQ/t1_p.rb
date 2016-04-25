@@ -1,6 +1,6 @@
 require 'bunny'
 
-conn = Bunny.new
+conn = Bunny.new(:port => 5673)
 conn.start
 
 ch = conn.create_channel

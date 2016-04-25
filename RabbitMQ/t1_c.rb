@@ -1,6 +1,6 @@
 require "bunny"
 
-conn = Bunny.new
+conn = Bunny.new(:port => 5673)
 conn.start
 
 ch   = conn.create_channel
@@ -10,7 +10,7 @@ puts " [*] Waiting for messages in #{q.name}. To exit press CTRL+C"
 q.subscribe(:block => true) do |delivery_info, properties, body|
   puts " [x] Received #{body}"
 
-  sleep(60)
+  sleep(2)
 
   puts " [x] Received #{body} end"
 
