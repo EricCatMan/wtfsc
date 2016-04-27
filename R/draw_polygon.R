@@ -1,4 +1,4 @@
-jpeg(file="myplot.jpeg")
+##jpeg(file="myplot2.jpeg")
 
 library(RPostgreSQL)
 drv <- dbDriver("PostgreSQL")
@@ -60,10 +60,15 @@ for(polygonstr in polygon_vectorstr) {
 }
 
 
-viewX <-c(1.5, 1.5, 2.5, 2.5, 1.5)
-viewY <-c(2.5, 3.5, 3.5, 2.5, 2.5)
+## viewX <-c(1.5, 1.5, 2.5, 2.5, 1.5)
+## viewY <-c(2.5, 3.5, 3.5, 2.5, 2.5)
+## polygon(viewX, viewY,  border = "green")
+
+viewX <-c(1.5, 1.5, 1.6, 1.6, 1.5)
+viewY <-c(2.5, 2.6, 2.6, 2.5, 2.5)
 polygon(viewX, viewY,  border = "green")
+
 
 title("A City Divided By Polygens")
 
-dev.off()
+##dev.off()
